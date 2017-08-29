@@ -1,10 +1,5 @@
-#############################################################
-# Archivo Dockerfile para ejecutar contenedores en Memcached
-# Basado en una imagen de Ubuntu
-#############################################################
-
 FROM ubuntu:12.04
-MAINTAINER Pato CAI Bas <patobasalo@gmail.com>
+MAINTAINER PatoCAIBas <patobasalo@gmail.com>
 VOLUME ["/opt/intra"]
 
 RUN apt-get update && \
@@ -16,15 +11,15 @@ RUN apt-get update && \
       php5-gd \
       php5-ldap \
       php5-mysql \
-      php5-pgsql
+      php5-pgsql \
+      vim
 
 #Puerto
 EXPOSE 8080
 
-COPY apache_default /etc/apache2/sites-available/000-default.conf
+COPY apache_default /etc/apache2/sites-available/default
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
 
 CMD ["/usr/local/bin/run"]
-
