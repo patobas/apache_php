@@ -1,0 +1,11 @@
+<VirtualHost *:8080>
+    DocumentRoot /opt/intra
+    <Directory /opt/intra>
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ErrorLog /dev/stdout
+    CustomLog /dev/stdout combined
+</VirtualHost>
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
