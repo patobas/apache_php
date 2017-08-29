@@ -1,6 +1,6 @@
-<VirtualHost *:8080>
-    DocumentRoot /opt/intra
-    <Directory /opt/intra>
+<VirtualHost *:80>
+    DocumentRoot /var/www
+    <Directory /var/www>
         AllowOverride All
         Order allow,deny
         Allow from all
@@ -8,4 +8,4 @@
     ErrorLog /dev/stdout
     CustomLog /dev/stdout combined
 </VirtualHost>
-# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
