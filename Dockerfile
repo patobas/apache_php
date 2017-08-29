@@ -1,6 +1,6 @@
 FROM ubuntu:12.04
 MAINTAINER PatoCAIBas <patobasalo@gmail.com>
-VOLUME ["/opt/intra"]
+VOLUME ["/var/www"]
 
 RUN apt-get update && \
     apt-get install -y \
