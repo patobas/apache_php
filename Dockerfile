@@ -16,7 +16,8 @@ RUN apt-get update && \
       php5-gd \
       php5-ldap \
       php5-mysql \
-      php5-pgsql
+      php5-pgsql \
+      vim
 
 #Puerto
 EXPOSE 8080
