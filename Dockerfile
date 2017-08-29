@@ -22,7 +22,7 @@ RUN apt-get update && \
 #Puerto
 EXPOSE 8080
 
-COPY apache_default /etc/apache2/sites-available/000-default.conf
+COPY apache_default /etc/apache2/sites-available/default
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
